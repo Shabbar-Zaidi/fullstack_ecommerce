@@ -1,0 +1,10 @@
+npm install react-router-dom react-toastify
+
+
+Backend:
+npm i express cors dotenv jsonwebtoken mutler mongoose stripe razorpay validator cloudinary bcrypt
+
+Admin:
+npm i axios reat-router-dom react-toastify
+
+

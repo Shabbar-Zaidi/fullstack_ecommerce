@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+.active {
+  /* active class keyword is present when the link is active */
+  background-color: #ffebf5;
+  border-color: #c586a5;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
