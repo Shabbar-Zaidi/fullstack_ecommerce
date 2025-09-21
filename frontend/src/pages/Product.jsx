@@ -16,10 +16,10 @@ const Product = ({}) => {
 
   const fetchProductData = () => {
     products.map((item) => {
-      if (item.id === productId) {
+      if (item._id === productId) {
         setProductData(item);
         setImage(item.image[0]);
-        // console.log(item);
+        console.log(item);
         return null;
       }
     });
@@ -69,7 +69,7 @@ const Product = ({}) => {
             </div>
           </div>
           {/* Add to cart */}
-          <button onClick={() => addToCart(productData.id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
+          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
           <hr className="mt-8 sm:w-4/5" />
 
           <div className="text-sm text-gray-500 flex-col flex mt-8">
