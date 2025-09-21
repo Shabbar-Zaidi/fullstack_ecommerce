@@ -3,13 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Login from "./components/Login.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Sidebar from "./components/SideBar.jsx";
+import Sidebar from "./components/Sidebar.jsx";
 import Add from "./pages/Add.jsx";
 import List from "./pages/List.jsx";
 import Orders from "./pages/Orders.jsx";
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL;
-export const currency = "$"
+export const currency = "$";
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem("token") ? localStorage.getItem("token") : "");
