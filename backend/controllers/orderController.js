@@ -108,26 +108,6 @@ const verifyStripe = async (req, res) => {
   }
 };
 
-const placeOrderRazorpay = async (req, res) => {
-  const { cartItems, totalAmount, deliveryInfo, paymentMethod, paymentDetails } = req.body;
-  const userId = req.userId; // Assuming userId is set in the auth middleware
-  try {
-    const newOrder = new orderModel({
-      userId,
-      items: cartItems,
-      amount: totalAmount,
-      address: deliveryInfo,
-      paymentMethod,
-      paymentDetails,
-      date: Date.now(),
-    });
-    await newOrder.save();
-    res.status(201).json({ success: true, message: "Order placed successfully" });
-  } catch (error) {
-    console.error("Error placing order:", error);
-    res.status(500).json({ success: false, message: "Failed to place order" });
-  }
-};
 
 // All orders data for admin panel - http://localhost:8080/api/orders/list - POST
 const allOrders = async (req, res) => {
@@ -166,4 +146,4 @@ const updateStatus = async (req, res) => {
   }
 };
 
-export { allOrders, placeOrder, placeOrderRazorpay, placeOrderStripe, verifyStripe, updateStatus, userOrders };
+export { allOrders, placeOrder, placeOrderStripe, verifyStripe, updateStatus, userOrders };
