@@ -5,10 +5,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import connectCloudinary from "./config/cloudinary.js";
 import connectDB from "./config/mongodb.js";
-import productRouter from "./routes/productRoute.js";
-import userRouter from "./routes/userRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import productRouter from "./routes/productRoute.js";
+import userRouter from "./routes/userRoute.js";
 
 // Environment variables
 dotenv.config();

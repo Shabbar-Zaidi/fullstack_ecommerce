@@ -57,22 +57,22 @@ const Product = ({}) => {
           <p className="mt-5 text-3xl font-medium">
             {currency} {productData.price}
           </p>
-          <p className="mt-5 text-gray-500 md:w-4/5">{productData.description}</p>
+          <p className="mt-5 text-gray-500 dark:text-white md:w-4/5">{productData.description}</p>
           <div className="flex flex-col gap-4 my-8">
             <p>Select Size</p>
             <div className="flex gap-2">
               {productData.sizes.map((item, index) => (
-                <button onClick={() => setSize(item)} key={index} className={`border py-2 px-4 bg-gray-100 ${size === item ? "border-orange-500" : ""}`}>
+                <button onClick={() => setSize(item)} key={index} className={`border py-2 px-4 bg-gray-100 dark:text-black ${size === item ? "border-orange-500" : ""}`}>
                   {item}
                 </button>
               ))}
             </div>
           </div>
           {/* Add to cart */}
-          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
+          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 dark:bg-gray-300 dark:text-black">ADD TO CART</button>
           <hr className="mt-8 sm:w-4/5" />
 
-          <div className="text-sm text-gray-500 flex-col flex mt-8">
+          <div className="text-sm text-gray-500 dark:text-white flex-col flex mt-8">
             <p>100% Original product</p>
             <p>Free delivery on orders over $50</p>
             <p>Easy 30 days returns and exchanges</p>
@@ -87,7 +87,7 @@ const Product = ({}) => {
           <p className="border px-5 py-3 text-sm">Reviews (122)</p>
         </div>
 
-        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500 dark:text-white">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum exercitationem, quis perferendis nam vitae in consequatur odit officia sit libero. Non esse mollitia, quos deserunt quas dolore culpa dolor nostrum?</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eius aut delectus, ratione tempora quam veniam ab sed sapiente minus eligendi consequuntur quisquam similique aspernatur deleniti iste, ducimus quibusdam placeat. Quod eveniet vel voluptas nulla non laboriosam porro error eius assumenda distinctio magnam, rerum labore aut odit. Exercitationem nam pariatur eligendi eius.</p>
         </div>

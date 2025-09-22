@@ -57,18 +57,18 @@ const Login = () => {
     }
   }, [token]);
   return (
-    <form onSubmit={onSubmitHandler} className="flex flex-col items-center sm:max-w-96 m-auto mt-14 gap-4 text-gray-800">
+    <form onSubmit={onSubmitHandler} className="flex flex-col items-center sm:max-w-96 m-auto mt-14 gap-4 text-gray-800 dark:text-white">
       <div className="inline-flex items-center gap-2 mt-10">
         <p className="prata-regular text-3xl">{currentState === "Login" ? "Login" : "Sign Up"}</p>
-        <hr className="w-8 border-none h-[1.5px] bg-gray-700" />
+        <hr className="w-8 border-none h-[1.5px] bg-gray-700 dark:bg-white" />
       </div>
-      {currentState === "Login" ? "" : <input onChange={(e) => setName(e.target.value)} value={name} className="w-full px-3 py-2 border border-gray-800" type="text" placeholder="Name" required />}
+      {currentState === "Login" ? "" : <input onChange={(e) => setName(e.target.value)} value={name} className="w-full px-3 py-2 border border-gray-800 dark:border-white" type="text" placeholder="Name" required />}
 
-      <input onChange={(e) => setEmail(e.target.value)} value={email} className="w-full px-3 py-2 border border-gray-800" type="email" placeholder="Email" required />
+      <input onChange={(e) => setEmail(e.target.value)} value={email} className="w-full px-3 py-2 border border-gray-800 dark:border-white" type="email" placeholder="Email" required />
 
       <div className="relative w-full">
-        <input onChange={(e) => setPassword(e.target.value)} value={password} type={showPassword ? "text" : "password"} placeholder="Password" className="w-full px-3 py-2 border border-gray-800" />
-        <span className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer text-gray-500" onClick={() => setShowPassword(!showPassword)}>
+        <input onChange={(e) => setPassword(e.target.value)} value={password} type={showPassword ? "text" : "password"} placeholder="Password" className="w-full px-3 py-2 border border-gray-800 dark:border-white dark:text-white" />
+        <span className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer text-gray-500 dark:text-white" onClick={() => setShowPassword(!showPassword)}>
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </span>
       </div>
@@ -85,7 +85,7 @@ const Login = () => {
           </p>
         )}
       </div>
-      <button className="py-2 mt-4 bg-black px-8 text-white">{currentState === "Login" ? "Login" : "Sign Up"}</button>
+      <button className="py-2 mt-4 bg-black px-8 text-white dark:bg-gray-300 dark:text-black">{currentState === "Login" ? "Login" : "Sign Up"}</button>
     </form>
   );
 };

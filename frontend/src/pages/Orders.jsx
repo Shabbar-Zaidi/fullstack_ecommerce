@@ -55,7 +55,7 @@ const Orders = () => {
 
       <div>
         {orderData.map((item, index) => (
-          <div key={index} className="py-4 border-t border-b text-gray-700 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div key={index} className="py-4 border-t border-b text-gray-700 dark:text-white flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-6 text-sm">
               <img className="w-16 sm:w-20" src={item.image[0]} alt="" />
               <div>
@@ -69,10 +69,10 @@ const Orders = () => {
                 </div>
 
                 <p className="mt-1">
-                  Date: <span className="text-gray-400">{new Date(item.date).toLocaleDateString()}</span>
+                  Date: <span className="text-gray-400 dark:text-gray-200">{new Date(item.date).toLocaleDateString()}</span>
                 </p>
                 <p className="mt-1">
-                  Payment: <span className="text-gray-400">{item.paymentMethod}</span>
+                  Payment: <span className="text-gray-400 dark:text-gray-200">{item.paymentMethod}</span>
                 </p>
               </div>
             </div>

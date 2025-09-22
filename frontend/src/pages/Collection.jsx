@@ -128,7 +128,7 @@ function Collection() {
           <Title text1={"ALL"} text2={"COLLECTIONS"} />
 
           {/* Product Sort */}
-          <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2" name="" id="">
+          <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2 dark:bg-slate-900 dark:text-white" name="" id="">
             <option value="relevent">Sort By: Relevent</option>
             <option value="low-high">Sort By: Low to High</option>
             <option value="high-low">Sort By: High to Low</option>
