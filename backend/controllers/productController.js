@@ -133,7 +133,7 @@ const listProducts = async (req, res) => {
     const products = await productModel.find();
     res.status(200).json({ success: true, message: "Products retrieved successfully", products });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Error retrieving products", error });
+    res.status(500).json({ success: false, message: "Error retrieving products", error: error.message });
   }
 };
 
