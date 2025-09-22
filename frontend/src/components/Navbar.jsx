@@ -8,7 +8,7 @@ const Navbar = () => {
   const location = useLocation();
 
   // Dark Theme:
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
 
   const element = document.documentElement;
   useEffect(() => {
