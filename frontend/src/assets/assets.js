@@ -72,8 +72,10 @@ import star_dull_icon from "./star_dull_icon.png";
 import star_icon from "./star_icon.png";
 import stripe_logo from "./stripe_logo.png";
 import support_img from "./support_img.png";
+import profile_pic from "./profile_pic.png";
 
 export const assets = {
+  profile_pic,
   logo,
   hero_img,
   cart_icon,

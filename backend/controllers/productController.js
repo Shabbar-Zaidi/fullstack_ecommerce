@@ -91,6 +91,7 @@ const addProduct = async (req, res) => {
       images.map(async (item) => {
         let result = await cloudinary.uploader.upload(item.path, {
           resource_type: "image",
+          folder: "product_images", // Optional: specify a folder in Cloudinary
         });
         return result.secure_url;
       })
